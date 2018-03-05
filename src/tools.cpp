@@ -45,7 +45,7 @@ MatrixXd Tools::CalculateJacobian(const VectorXd& x_state) {
   // check division by zero
   if(divisor == 0) {
 	  cout << "CalculateJacobian () - Error - Division by Zero" << endl;
-	  exit;
+	  exit(0);
   }
   
   Hj << (px/std::sqrt(divisor)), (py/std::sqrt(divisor)), 0, 0,
